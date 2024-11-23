@@ -144,9 +144,12 @@ a {
 }
 
 .logo {
+    display: inline-block;
+
     margin-right: 76px;
 
     color: var(--iris);
+
 }
 
 .custom_text {
@@ -380,6 +383,8 @@ address {
 }
 
 .footer_logo__span {
+    display: inline-block;
+
     color: #f4f4fd
 }
 
