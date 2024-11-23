@@ -28,6 +28,7 @@ p,
 ul,
 ol,
 li {
+    display: inline-block;
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -35,6 +36,20 @@ li {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /*  P R O J E C T  S T Y L E  */
@@ -94,7 +109,6 @@ a {
 /*  H E A D E R  */
 
 .header_body {
-    padding: 24px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -122,10 +136,12 @@ a {
 
 .header_nav {
     display: flex;
-    gap: 76px;
+    align-items: center;
 }
 
 .logo {
+    margin-right: 76px;
+
     color: var(--iris);
 }
 
@@ -141,6 +157,10 @@ a {
 .nav_link {
     color: #2e2f42;
     font-weight: 500;
+}
+
+.link {
+    padding: 24px 0;
 }
 
 .nav_link:hover,
@@ -170,17 +190,15 @@ address {
 
 
 
-/*  O R D E R  S E C T I O N  */
+/*  H E R O  S E C T I O N  */
 
 .hero_section {
+    padding: 188px 0;
+
     background-color: var(--navy-blue);
 }
 
 .hero_wrapper {
-    padding: 188px 0;
-
-    max-width: 496px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -189,6 +207,8 @@ address {
 }
 
 .general_title {
+    max-width: 496px;
+
     font-weight: 700;
     font-size: 56px;
     letter-spacing: 0.02em;
@@ -197,6 +217,7 @@ address {
 }
 
 .hero_section button {
+    min-width: 169px;
     background: var(--iris);
 }
 
@@ -235,12 +256,15 @@ address {
     gap: 24px;
 }
 
-.benefits_card_list li {
+.benefits_card {
     width: calc((100% - 12px) / 4);
 
     display: flex;
     flex-direction: column;
-    gap: 8px;
+}
+
+.card_title {
+    margin-bottom: 8px;
 }
 
 /*  O U R  T E A M  S E C T I O N  */
@@ -252,7 +276,6 @@ address {
 .our_team_wrapper {
     display: flex;
     flex-direction: column;
-    gap: 72px;
 }
 
 .our_team_list {
@@ -262,6 +285,8 @@ address {
 }
 
 .section_title {
+    margin-bottom: 72px;
+
     text-transform: capitalize;
 }
 
@@ -280,27 +305,34 @@ address {
 }
 
 .card_content_box {
-    padding: 32px 16px;
+    padding: 32px 0;
     display: flex;
     flex-direction: column;
-    gap: 8px;
 }
 
 .people_work {
     font-size: 16px;
+
+    text-align: center;
+}
+
+.people_name {
+    margin-bottom: 8px;
+    text-align: center;
 }
 
 
 /*  P O R T F O L I O  S E C T I O N  */
 
 .portfolio_title {
+    margin-bottom: 72px;
+
     text-transform: capitalize;
 }
 
 .portfolio_wrapper {
     display: flex;
     flex-direction: column;
-    gap: 72px;
 }
 
 .portfolio_list {
@@ -320,6 +352,10 @@ address {
     border-right: 1px solid var(--cornflower);
 }
 
+.category_title {
+    margin-bottom: 8px;
+}
+
 /*  F O O T E R  */
 
 .footer_body {
@@ -332,14 +368,16 @@ address {
 
 }
 
-.logo_box {
-    max-width: 262px;
-}
-
 .footer_logo {
     display: inline-block;
 
     margin-bottom: 16px;
 
     color: #f4f4fd
+}
+
+.footer__about_text {
+    display: block;
+
+    max-width: 264px;
 }
