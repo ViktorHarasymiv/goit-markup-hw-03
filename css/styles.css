@@ -38,6 +38,10 @@ li {
     vertical-align: baseline;
 }
 
+img {
+    display: block;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -342,10 +346,11 @@ address {
     gap: 48px 24px;
 }
 
-.portfolio_list li {}
-
 .portfolio_content_box {
     padding: 32px 16px;
+
+    display: flex;
+    flex-direction: column;
 
     border-bottom: 1px solid var(--cornflower);
     border-left: 1px solid var(--cornflower);
