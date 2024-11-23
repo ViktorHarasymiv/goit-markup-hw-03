@@ -380,6 +380,7 @@ address {
     display: inline-block;
 
     margin-bottom: 16px;
+    color: var(--iris);
 }
 
 .footer_logo__span {
