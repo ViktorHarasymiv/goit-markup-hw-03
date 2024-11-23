@@ -370,11 +370,7 @@ address {
     padding: 100px 0;
 }
 
-.footer_section {
-    display: flex;
-    flex-direction: column;
-
-}
+.footer_section {}
 
 .logo_footer {
     display: inline-block;
