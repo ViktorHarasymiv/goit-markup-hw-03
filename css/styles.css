@@ -373,11 +373,13 @@ address {
 
 }
 
-.footer_logo {
+.logo_footer {
     display: inline-block;
 
     margin-bottom: 16px;
+}
 
+.footer_logo__span {
     color: #f4f4fd
 }
 
